@@ -22,7 +22,8 @@ https://pyautogui.readthedocs.io/en/latest/mouse.html
 DISPLAY_MODE = "full"
 NUM_TABS = 20  # Has to be two times the number of iterations in join.py!!!
 
-pyautogui.PAUSE = 0.04  # Increase this value (seconds) if the script is going too fast (performance issues)
+# Increase this value (seconds) if the script is going too fast (performance issues)
+pyautogui.PAUSE = 0.04  # Generally, 0.04 to 0.06 works
 
 
 class Constants:

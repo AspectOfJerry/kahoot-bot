@@ -37,9 +37,10 @@ Sequence (sets of two tabs to give time to load the page):
 
 KAHOOT_URL = "https://kahoot.it/"
 GAME_PIN = "0000000"  # Replace with the game pin
-NUM_ITER = 10  # Number of bots is two times the number of iterations because they join in pairs
+NUM_ITER = 20  # Number of bots is two times the number of iterations because they join in pairs
 
-pyautogui.PAUSE = 0.1  # Increase this value (seconds) if the script is going too fast (performance issues)
+# Increase this value (seconds) if the script is going too fast (performance issues).
+pyautogui.PAUSE = 0.1  # Generally, 0.1 to 0.3 works
 
 
 def generate_nickname():

@@ -14,9 +14,10 @@ Remember to focus on the browser window where the kahoot game is after starting 
 ```python
 KAHOOT_URL = "https://kahoot.it/"
 GAME_PIN = "0000000"  # Replace with the game pin
-NUM_ITER = 10  # Number of bots is two times the number of iterations because they join in pairs
+NUM_ITER = 20  # Number of bots is two times the number of iterations because they join in pairs
 
-pyautogui.PAUSE = 0.1  # Increase this value (seconds) if the script is going too fast (performance issues)
+# Increase this value (seconds) if the script is going too fast (performance issues).
+pyautogui.PAUSE = 0.1  # Generally, 0.1 to 0.3 works
 ```
 
 Note: The amount of bots that join the game is two times the `NUM_ITER` variable because they join in pairs.
@@ -32,7 +33,8 @@ Note: The amount of bots that join the game is two times the `NUM_ITER` variable
 DISPLAY_MODE = "full"
 NUM_TABS = 20  # Has to be two times the number of iterations in join.py!!!
 
-pyautogui.PAUSE = 0.04  # Increase this value (seconds) if the script is going too fast (performance issues)
+# Increase this value (seconds) if the script is going too fast (performance issues)
+pyautogui.PAUSE = 0.04  # Generally, 0.04 to 0.06 works
 ```
 
 Note: The amount of tabs that the script has to switch has to be two times the `NUM_ITER` variable from `join.py` because they join in pairs.
