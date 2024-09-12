@@ -35,19 +35,19 @@ Sequence (sets of two tabs to give time to load the page):
 22. Press Enter
 """
 
-KAHOOT_URL = "https://kahoot.it/"
 GAME_PIN = "0000000"  # Replace with the game pin
-NUM_ITER = 20  # Number of bots is two times the number of iterations because they join in pairs
+KAHOOT_URL = "https://kahoot.it/?pin=" + GAME_PIN
+NUM_ITER = 10  # Number of bots is two times the number of iterations because they join in pairs
 
-# Increase this value (seconds) if the script is going too fast (performance issues).
-pyautogui.PAUSE = 0.1  # Generally, 0.1 to 0.3 works
+# Increase this value (seconds) if the script is going too fast due to performance or network overhead.
+pyautogui.PAUSE = 0.2  # Generally, 0.1 to 0.3 works
 
 
 def generate_nickname():
     response = requests.get("https://api.jerrydev.net/generators/human_name")
     response_json = response.json()
 
-    name = response_json["data"]["name"]
+    name = response_json["data"]
     truncated_name = name[:14]  # Truncate the name if it exceeds 14 characters
     print(cc("BLUE", "+ " + truncated_name))
     return truncated_name
@@ -85,13 +85,13 @@ for _ in range(NUM_ITER):
     open_tab()  # Open first tab
     open_tab()  # Open second tab
 
-    print(cc("FUCHSIA", "MOV <<"))
-    pyautogui.shortcut("ctrl", "shift", "tab")  # Go to first tab
-    focus_pin_enter()
+    # print(cc("FUCHSIA", "MOV <<"))
+    # pyautogui.shortcut("ctrl", "shift", "tab")  # Go to first tab
+    # focus_pin_enter()
 
-    print(cc("FUCHSIA", "MOV >>"))
-    pyautogui.shortcut("ctrl", "tab")  # Go to second tab
-    focus_pin_enter()
+    # print(cc("FUCHSIA", "MOV >>"))
+    # pyautogui.shortcut("ctrl", "tab")  # Go to second tab
+    # focus_pin_enter()
 
     print(cc("FUCHSIA", "MOV <<"))
     pyautogui.shortcut("ctrl", "shift", "tab")  # Go to first tab
